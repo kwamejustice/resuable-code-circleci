@@ -7,16 +7,16 @@ orbs:
 # Orchestrate or schedule a set of jobs
 # commands to be run
 commands:
- print_pipliner-id:
-  steps: 
-   - run: echo ${CRICLE_WORKFLOW_ID}
+  print_pipliner-id:
+    steps: 
+     - run: echo ${CRICLE_WORKFLOW_ID}
 
 jobs:
- my_job:
-  docker: 
-   - image: circleci/node:13.8.0
-  steps:
-   - print_pipline_id
+   my_job:
+     docker: 
+       - image: circleci/node:13.8.0
+   steps:
+     - print_pipline_id
 workflows:
   # Name the workflow "welcome"
   welcome:
